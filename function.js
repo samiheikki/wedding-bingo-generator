@@ -107,3 +107,24 @@ for (let i = 0; i < numberOfBingoCards; i++) {
   }
   bingos.push(currentBingo);
 }
+
+const body = document.querySelector('body');
+bingos.forEach(bingo => {
+  const bingoElement = document.createElement('table');
+  bingo.forEach((row, i) => {
+    const rowElement = document.createElement('tr');
+    const thirdRow = i === 2;
+    row.forEach((column, j) => {
+      const columnElement = document.createElement('td');
+      const thirdColumn = j === 2;
+      if (thirdRow && thirdColumn) {
+        columnElement.innerHTML = '❤️';
+      } else {
+        columnElement.innerHTML = column;
+      }
+      rowElement.appendChild(columnElement);
+    });
+    bingoElement.appendChild(rowElement);
+  });
+  body.appendChild(bingoElement);
+});
