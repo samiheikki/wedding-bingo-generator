@@ -11,8 +11,6 @@ const options = [
     'Aurinko paistaa',
     'Puhe naurattaa',
     'Puhe itkettää',
-    'Joku käy grillillä välipalalla',
-    'Joku käy jokilaivalla välipalalla',
     'Hääpari suutelee',
     'Juoma läikkyy',
     'Kuokkavieraita',
@@ -118,7 +116,7 @@ bingos.forEach(bingo => {
       const columnElement = document.createElement('td');
       const thirdColumn = j === 2;
       if (thirdRow && thirdColumn) {
-        columnElement.innerHTML = '❤️';
+        columnElement.innerHTML = '<img src="heart2.png">';
       } else {
         columnElement.innerHTML = column;
       }
