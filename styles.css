@@ -1,6 +1,17 @@
 body {
   font-family: 'Amatic SC', cursive;
-  font-size: 25px;
+  font-size: 20px;
+  margin: 0;
+}
+
+.wrapper {
+  width: 210mm;
+  height: 148.4mm;
+  overflow: hidden;
+}
+
+.wrapper:nth-child(odd) {
+  page-break-after: always;
 }
 
 table, th, td {
@@ -8,19 +19,104 @@ table, th, td {
 }
 
 table {
-  width: 210mm;
-  height: 148.5mm;
-  margin-bottom: 5mm;
+  width: 190mm;
+  margin-left: 10mm;
+  height: 107mm;
   table-layout: fixed;
   border-collapse: collapse;
+  overflow: hidden;
 }
 
 td {
   width: 20%;
-  height: 20%;
+  height: calc(107mm / 5);
   text-align: center;
 }
 
 td img {
-  width: 60%;
+  width: 50%;
+}
+
+.gradient {
+  width: 100%;
+  height: 10mm;
+  background: repeating-linear-gradient( 145deg, #ffffff, #ffffff 10px, #cdd1dc 10px, #cdd1dc 20px );
+}
+
+.gradient-top {
+  margin-bottom: 8mm;
+}
+
+.gradient-bottom {
+  margin-top: 2mm;
+}
+
+.ribbon {
+  font-size: 24px !important;
+  width: 120mm;
+  position: absolute;
+  background: #ba89b6;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0 3px 0;
+  left: 45mm;
+  margin: -14mm 0 0 0;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+.top-description {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: .66mm;
+  padding: 0 10mm 0 10mm;
+}
+
+div.right-arrow {
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 33px;
+  width: 99mm;
+  padding-left: 2mm;
+  background-color: #ba89b6;
+  position: absolute;
+  left: 109mm;
+}
+
+div.right-arrow:before,
+div.right-arrow:after {
+  content: "";
+  border-style: solid;
+  border-width: 0;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+div.right-arrow:before {
+  border-width: 16.5px 0 16.5px 16.5px;
+}
+
+div.right-arrow:before {
+  border-color: #ba89b6 transparent;
+  left: -16.5px;
+}
+
+div.right-arrow:after {
+  border-color: transparent #ba89b6;
+  right: -16.5px;
 }

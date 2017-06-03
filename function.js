@@ -40,7 +40,7 @@ const options = [
     'Häävalssi',
     'Joku huijaa bingossa',
     'Nolo muisto polttareista',
-    'Selfie',
+    '#selfie',
     'Joku huutaa BINGO!',
     'Reikä sukkahousuissa',
     'Tutustut uuteen ihmiseen',
@@ -71,7 +71,7 @@ const options = [
     'Joku kommentoi säätä',
     'Joku humaltuu',
     '"Minä muistan kun..."',
-    'Bestman esittää tanssiperformanssin',
+    'Bestman esittää tanssi-performanssin',
     'Joku syö hääkarkin',
     'Avioliittoneuvo',
     'Juhlavieras luopuu korkkareistaan',
@@ -80,13 +80,17 @@ const options = [
 ]; 
     
 const numberOfBingoCards = 50;
+const numberOfRows = 5;
+const headerContent = 'Essi ❤️ Niko 17.06.2017';
+const description = 'Bongaa viiden suora pystyyn, vaakaan tai vinoon ja huuda bingo';
+const winnerDescription = 'Kolme ensimmäistä bingoavat itselleen yllätyspalkinnon!';
 
 const bingos = [];
 for (let i = 0; i < numberOfBingoCards; i++) {
   const currentBingo = [];
-  for (let j = 0; j < 5; j++) {
+  for (let j = 0; j < numberOfRows; j++) {
     const currentRow = [];
-    while (currentRow.length < 5) {
+    while (currentRow.length < numberOfRows) {
       let randomOption = options[Math.floor(Math.random()*options.length)];
       if (!currentRow.includes(randomOption)) {
         let addOption = true;
@@ -107,8 +111,31 @@ for (let i = 0; i < numberOfBingoCards; i++) {
 }
 
 const body = document.querySelector('body');
+
 bingos.forEach(bingo => {
-  const bingoElement = document.createElement('table');
+  const bingoElement = document.createElement('div');
+  const bingoTable = document.createElement('table');
+  const gradientTop = document.createElement('div');
+  const gradientBottom = document.createElement('div');
+  const ribbon = document.createElement('h1');
+  const ribbonContent = document.createElement('strong');
+  const topDescription = document.createElement('div');
+  const bottomDescription = document.createElement('div');
+
+  bingoElement.classList.add('wrapper');
+  gradientTop.classList.add('gradient');
+  gradientTop.classList.add('gradient-top');
+  gradientBottom.classList.add('gradient');
+  gradientBottom.classList.add('gradient-bottom');
+  ribbon.classList.add('ribbon');
+  ribbonContent.classList.add('ribbon-content');
+  topDescription.classList.add('top-description');
+  bottomDescription.classList.add('right-arrow');
+
+  ribbonContent.innerHTML = headerContent;
+  topDescription.innerHTML = description;
+  bottomDescription.innerHTML = winnerDescription;
+
   bingo.forEach((row, i) => {
     const rowElement = document.createElement('tr');
     const thirdRow = i === 2;
@@ -122,7 +149,15 @@ bingos.forEach(bingo => {
       }
       rowElement.appendChild(columnElement);
     });
-    bingoElement.appendChild(rowElement);
+    bingoTable.appendChild(rowElement);
   });
+
+  ribbon.appendChild(ribbonContent);
+  bingoElement.appendChild(gradientTop);
+  bingoElement.appendChild(ribbon);
+  bingoElement.appendChild(topDescription);
+  bingoElement.appendChild(bingoTable);
+  bingoElement.appendChild(bottomDescription);
+  bingoElement.appendChild(gradientBottom);
   body.appendChild(bingoElement);
 });
