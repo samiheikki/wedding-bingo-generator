@@ -81,7 +81,7 @@ const options = [
     
 const numberOfBingoCards = 50;
 const numberOfRows = 5;
-const headerContent = 'Essi ❤️ Niko 17.06.2017';
+const headerContent = 'Essi <img src="white-heart.png" class="white-heart"> Niko 17.06.2017';
 const description = 'Bongaa viiden suora pystyyn, vaakaan tai vinoon ja huuda bingo';
 const winnerDescription = 'Kolme ensimmäistä bingoavat itselleen yllätyspalkinnon!';
 

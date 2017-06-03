@@ -120,3 +120,7 @@ div.right-arrow:after {
   border-color: transparent #ba89b6;
   right: -16.5px;
 }
+
+.white-heart {
+  height: 18px;
+}
