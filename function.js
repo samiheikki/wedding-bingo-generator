@@ -1,7 +1,5 @@
 const options = [
     'Sulhasen äiti ei voi lopettaa itkemistä',
-    'Morsian ei voi lopettaa itkemistä',
-    'Morsiamen isä ei voi lopettaa itkemistä',
     'Morsiamen äiti ei voi lopettaa itkemistä',
     'Tanssitaan valssi',
     'Leikataan kakkua',
@@ -19,10 +17,8 @@ const options = [
     'Hääparista kerrotaan muisto',
     'Sormuksia ihastellaan',
     'Morsian ryöstetään',
-    'Morsian / anoppi kyynelehtii',
     'Kaaso / bestman juoksee',
     'Morsian vaihtaa kengät',
-    'Joku pitää puheen',
     'Bestman /sulhanen / morsian on hukassa',
     'Kaaso nappaa kimpun',
     'Bestman nappaa sukkanauhan',
@@ -32,7 +28,6 @@ const options = [
     'Sulhanen vaimottelee',
     'Säätä kommentoidaan',
     'Piilopullo',
-    'Bestman / Kaaso / sulhanen pitää puheen',
     'Anoppi joraa',
     'Karkkibuffet tyhjenee',
     'Jotain menee rikki',
@@ -46,7 +41,6 @@ const options = [
     'Tutustut uuteen ihmiseen',
     'Isä antaa neuvon',
     'Hääpari liikuttuu',
-    'Morsian esittelee sormustaan',
     'Anoppi tanssittaa sulhasta',
     'Puhe!',
     'Hääpari leikkaa kakun',
@@ -63,7 +57,6 @@ const options = [
     'Lapset villiintyvät',
     'Puhelin soi',
     'Joku kertoo vitsin',
-    'Sulhanen kyynelehtii',
     'Morsian on hukassa',
     'Huulipunaa lisätään',
     'Kimppu heitetään',
@@ -75,15 +68,15 @@ const options = [
     'Joku syö hääkarkin',
     'Avioliittoneuvo',
     'Juhlavieras luopuu korkkareistaan',
-    'Itkettävä puhe',
-    'Sulhanen pyörtyy'
+    'Sulhanen pyörtyy',
+    'Hääparista otetaan valokuva'
 ]; 
     
 const numberOfBingoCards = 50;
 const numberOfRows = 5;
 const headerContent = 'Essi <img src="white-heart.png" class="white-heart"> Niko 17.06.2017';
 const description = 'Bongaa viiden suora pystyyn, vaakaan tai vinoon ja huuda bingo';
-const winnerDescription = 'Kolme ensimmäistä bingoavat itselleen yllätyspalkinnon!';
+const winnerDescription = 'Kolme ensimmäistä bingoavat itselleen yllätyspalkinnon! #essijaniko2017';
 
 const bingos = [];
 for (let i = 0; i < numberOfBingoCards; i++) {

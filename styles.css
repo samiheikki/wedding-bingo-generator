@@ -90,11 +90,11 @@ div.right-arrow {
   color: #FFFFFF;
   font-size: 22px;
   line-height: 33px;
-  width: 99mm;
+  width: 126mm;
   padding-left: 2mm;
   background-color: #ba89b6;
   position: absolute;
-  left: 109mm;
+  left: 82mm;
 }
 
 div.right-arrow:before,
